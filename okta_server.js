@@ -4,12 +4,12 @@
  * Define the base object namespace. By convention we use the service name
  * in PascalCase (aka UpperCamelCase). Note that this is defined as a package global.
  */
-Imgur = {};
+Okta = {};
 
 /**
  * Boilerplate hook for use by underlying Meteor code
  */
-Imgur.retrieveCredential = (credentialToken, credentialSecret) => {
+Okta.retrieveCredential = (credentialToken, credentialSecret) => {
   return OAuth.retrieveCredential(credentialToken, credentialSecret);
 };
 
@@ -20,7 +20,7 @@ Imgur.retrieveCredential = (credentialToken, credentialSecret) => {
  * Note that we *must* have an id. Also, this array is referenced in the
  * accounts-imgur package, so we should probably keep this name and structure.
  */
-Imgur.whitelistedFields = ['openid'];
+Okta.whitelistedFields = ['openid'];
 
 /**
  * Register this service with the underlying OAuth handler
