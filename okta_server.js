@@ -81,7 +81,7 @@ OAuth.registerService('imgur', 2, null, function(query) {
   if (response.refreshToken) {
     serviceData.refreshToken = response.refreshToken;
   }
-  _.extend(serviceData, _.pick(identity, Imgur.whitelistedFields));
+  _.extend(serviceData, _.pick(identity, Okta.whitelistedFields));
 
   /**
    * Return the serviceData object along with an options object containing
