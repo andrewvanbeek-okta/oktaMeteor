@@ -28,7 +28,7 @@ Okta.requestCredential = function(options, credentialRequestCompleteCallback) {
    * Make sure we have a config object for subsequent use (boilerplate)
    */
   const config = ServiceConfiguration.configurations.findOne({
-    service: 'imgur'
+    service: 'okta'
   });
   if (!config) {
     credentialRequestCompleteCallback && credentialRequestCompleteCallback(
@@ -41,7 +41,7 @@ Okta.requestCredential = function(options, credentialRequestCompleteCallback) {
    * Boilerplate
    */
   const credentialToken = Random.secret();
-  const loginStyle = OAuth._loginStyle('imgur', config, options);
+  const loginStyle = OAuth._loginStyle('okta', config, options);
 
   /**
    * Imgur requires response_type and client_id
@@ -61,7 +61,7 @@ Okta.requestCredential = function(options, credentialRequestCompleteCallback) {
    * Client initiates OAuth login request (boilerplate)
   */
   OAuth.launchLogin({
-    loginService: 'imgur',
+    loginService: 'okta',
     loginStyle: loginStyle,
     loginUrl: loginUrl,
     credentialRequestCompleteCallback: credentialRequestCompleteCallback,
