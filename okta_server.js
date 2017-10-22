@@ -31,13 +31,13 @@ Okta.whitelistedFields = ['openid'];
  *  handleOauthRequest = function(query) returns {serviceData, options} where options is optional
  * serviceData will end up in the user's services.imgur
  */
-OAuth.registerService('imgur', 2, null, function(query) {
+OAuth.registerService('okta', 2, null, function(query) {
 
   /**
    * Make sure we have a config object for subsequent use (boilerplate)
    */
   const config = ServiceConfiguration.configurations.findOne({
-    service: 'imgur'
+    service: 'okta'
   });
   if (!config) {
     throw new ServiceConfiguration.ConfigError();
