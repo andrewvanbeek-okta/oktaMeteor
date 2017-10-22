@@ -20,7 +20,7 @@ Package.onUse(function(api) {
   api.use(['underscore', 'service-configuration'], ['client', 'server']);
   api.use(['random', 'templating'], 'client');
 
-  api.export('Imgur');
+  api.export('Okta');
 
   api.addFiles(
     ['okta_configure.html', 'okta_configure.js'],
