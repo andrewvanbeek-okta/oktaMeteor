@@ -4,7 +4,7 @@
  * Define the base object namespace. By convention we use the service name
  * in PascalCase (aka UpperCamelCase). Note that this is defined as a package global (boilerplate).
  */
-Imgur = {};
+Okta = {};
 
 /**
  * Request Imgur credentials for the user (boilerplate).
@@ -13,7 +13,7 @@ Imgur = {};
  * @param {Object}    options                             Optional
  * @param {Function}  credentialRequestCompleteCallback   Callback function to call on completion. Takes one argument, credentialToken on success, or Error on error.
  */
-Imgur.requestCredential = function(options, credentialRequestCompleteCallback) {
+Okta.requestCredential = function(options, credentialRequestCompleteCallback) {
   /**
    * Support both (options, callback) and (callback).
    */
