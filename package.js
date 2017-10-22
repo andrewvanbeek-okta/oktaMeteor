@@ -23,9 +23,9 @@ Package.onUse(function(api) {
   api.export('Imgur');
 
   api.addFiles(
-    ['imgur_configure.html', 'imgur_configure.js'],
+    ['okta_configure.html', 'okta_configure.js'],
     'client');
 
-  api.addFiles('imgur_server.js', 'server');
-  api.addFiles('imgur_client.js', 'client');
+  api.addFiles('okta_server.js', 'server');
+  api.addFiles('okta_client.js', 'client');
 });
