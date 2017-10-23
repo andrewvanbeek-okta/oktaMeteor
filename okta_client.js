@@ -52,9 +52,9 @@ Okta.requestCredential = function(options, credentialRequestCompleteCallback) {
   //   '&client_id=' + config.clientId +
   //   '&state=' + OAuth._stateParam(loginStyle, credentialToken);
 
-  const loginUrl = "https://vanbeektech.okta.com/oauth2/v1/authorize?scope=" + "openid"
-                    + "&redirect_uri=" + "http://localhost:3000" + "&state=dhuh43r&nonce=45AAGR3"
-                    + "&response_type=code&client_id=" + config.clientId
+  const loginUrl = config.oktaauthorizeurl + "?scope=" + "openid email profile"
+                    + "&redirect_uri=" + config.redirecturi + "&state=dhuh43r&nonce=45AAGR3"
+                    + "&response_type=token&client_id=" + config.clientId
                     + "&access_type=offline";
 
   /**
